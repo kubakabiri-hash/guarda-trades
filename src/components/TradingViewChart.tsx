@@ -108,14 +108,14 @@ export function TradingViewChart({ onTrade, showControls = true }: { onTrade?: (
   };
 
   return (
-    <div className="space-y-0 rounded-2xl overflow-hidden border border-white/5 bg-[#0a0a0a] flex flex-col h-full min-h-[650px]">
+    <div className="space-y-0 rounded-2xl overflow-hidden border border-white/5 bg-[#0a0a0a] flex flex-col h-full min-h-[400px] md:min-h-[650px]">
       {/* Symbol selector bar */}
       <div className="flex items-center gap-1 px-3 py-2 border-b border-white/5 bg-white/[0.02] overflow-x-auto shrink-0">
         {symbols.map(s => (
           <button
             key={s.short}
             onClick={() => setCurrentSymbol(s.short)}
-            className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${
+            className={`px-2 py-1 text-[9px] sm:px-3 sm:py-1.5 sm:text-[10px] font-black uppercase tracking-widest transition-all whitespace-nowrap ${
               currentSymbol === s.short
                 ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
                 : 'text-zinc-500 hover:text-zinc-300 hover:bg-white/5 border border-transparent'
@@ -127,7 +127,7 @@ export function TradingViewChart({ onTrade, showControls = true }: { onTrade?: (
       </div>
 
       {/* Chart container */}
-      <div className="flex-1 w-full relative min-h-[500px]">
+      <div className="flex-1 w-full relative min-h-[300px] md:min-h-[500px]">
         <div ref={containerRef} className="absolute inset-0 w-full h-full" />
       </div>
 
@@ -137,7 +137,7 @@ export function TradingViewChart({ onTrade, showControls = true }: { onTrade?: (
           <div className="flex items-center gap-1 bg-white/5 rounded-xl p-1">
             <button
               onClick={() => setSelectedType('buy')}
-              className={`px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-all ${
                 selectedType === 'buy'
                   ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
                   : 'text-zinc-500 hover:text-emerald-400'
@@ -147,7 +147,7 @@ export function TradingViewChart({ onTrade, showControls = true }: { onTrade?: (
             </button>
             <button
               onClick={() => setSelectedType('sell')}
-              className={`px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-all ${
                 selectedType === 'sell'
                   ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/30'
                   : 'text-zinc-500 hover:text-rose-400'
@@ -163,7 +163,7 @@ export function TradingViewChart({ onTrade, showControls = true }: { onTrade?: (
           </div>
           <button
             onClick={handleTrade}
-            className={`px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all text-white ${
+            className={`px-4 py-2 sm:px-6 sm:py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all text-white ${
               selectedType === 'buy'
                 ? 'bg-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-500/20'
                 : 'bg-rose-600 hover:bg-rose-500 shadow-lg shadow-rose-500/20'

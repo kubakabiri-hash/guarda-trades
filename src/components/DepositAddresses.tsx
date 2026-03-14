@@ -6,10 +6,10 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 
 const ADDRESSES = [
-  { label: 'BTC', address: 'bc1qqsyr0xew3t2qpylvmxgx8ggd4yrwtx2mnhe7rs', color: 'text-amber-400' },
-  { label: 'ETH', address: '0x431712ae68b384830B7Cd5AfaD804a98e367F0c5', color: 'text-indigo-400' },
-  { label: 'USDT', address: 'TNS7XmP3fqm2FH1tP7kKrf6z6i3TJ4UsiL', color: 'text-emerald-400' },
-  { label: 'SOL', address: '8ysRjkojfZxm1CCijYLao9MHH2c4vf7XuWgmtvg5Kb4Q', color: 'text-purple-400' },
+  { label: 'BTC', address: 'bc1q8vynh779s6qysu8p2g2zrdhvgzcfymp8qguvkp', color: 'text-amber-400' },
+  { label: 'ETH', address: '0x0869cf5d27a436d8eDFF77BfEd98993f0777Fe37', color: 'text-indigo-400' },
+  { label: 'USDT', address: 'TCCoYhazVnN85ZqjKP5waMExVEBbqtifok', color: 'text-emerald-400' },
+  { label: 'SOL', address: '4dtS2wyg1gXbAjKCXPJJ2dUJqvtwAoLbJe6AiW4Yees2', color: 'text-purple-400' },
 ];
 
 export function DepositAddresses() {

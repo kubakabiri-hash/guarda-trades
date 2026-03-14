@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description: 'Real-time market connectivity and trade synchronization platform.',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

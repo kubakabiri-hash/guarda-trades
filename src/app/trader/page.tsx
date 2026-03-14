@@ -279,7 +279,7 @@ export default function TraderDashboard() {
         {/* Header */}
         <header className="flex items-center justify-between border-b border-white/5 pb-5">
           <div>
-            <h1 className="text-3xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">TRADER TERMINAL</h1>
+            <h1 className="text-2xl md:text-3xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">TRADER TERMINAL</h1>
             <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-widest mt-1 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
               {profile?.full_name || 'TRADER'}
@@ -322,13 +322,13 @@ export default function TraderDashboard() {
         )}
 
         {/* Stats row */}
-        <div className="grid gap-4 grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
           <div className="rounded-2xl border border-white/5 bg-white/[0.03] backdrop-blur-xl p-4 group hover:border-indigo-500/20 transition-all">
             <div className="flex items-center justify-between mb-2">
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500">LIQUIDITY</span>
               <Wallet className="h-3.5 w-3.5 text-indigo-500/50" />
             </div>
-            <div className="text-2xl font-black tracking-tighter text-emerald-400">
+            <div className="text-xl md:text-2xl font-black tracking-tighter text-emerald-400">
               {portfolio?.balance?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) || '0.00'}
               <span className="text-sm text-emerald-500/70 ml-1">USDT</span>
             </div>
@@ -345,7 +345,7 @@ export default function TraderDashboard() {
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500">P/L</span>
               <TrendingUp className="h-3.5 w-3.5 text-indigo-500/50" />
             </div>
-            <div className={`text-2xl font-black tracking-tighter ${totalPL >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+            <div className={`text-xl md:text-2xl font-black tracking-tighter ${totalPL >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
               {totalPL >= 0 ? '+' : ''}{totalPL.toFixed(2)}
               <span className={`text-sm ml-1 ${totalPL >= 0 ? 'text-emerald-500/70' : 'text-rose-500/70'}`}>USDT</span>
             </div>
@@ -365,8 +365,8 @@ export default function TraderDashboard() {
         </div>
 
         {/* Signals + Positions */}
-        <div className="grid gap-6 lg:grid-cols-3">
-          <div className="lg:col-span-2 space-y-4">
+        <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
+          <div className="col-span-1 lg:col-span-2 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold">Broker Signals</h2>
               <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 bg-white/5 px-3 py-1 rounded-lg">{signals.length} active</span>

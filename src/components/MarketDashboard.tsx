@@ -34,7 +34,8 @@ export default function MarketDashboard() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <Table>
+        <div className="overflow-x-auto">
+          <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               <TableHead className="w-[100px]">Asset</TableHead>
@@ -61,6 +62,7 @@ export default function MarketDashboard() {
             })}
           </TableBody>
         </Table>
+        </div>
       </CardContent>
     </Card>
   );
